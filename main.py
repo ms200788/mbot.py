@@ -220,7 +220,7 @@ async def ad_page(slug: str, request: Request, db=Depends(get_db)):
 <title>Exclusive Psychological Insight</title>
 
 <style>
-body {
+body {{
     font-family: Arial, sans-serif;
     background: #ffffff;
     color: #222;
@@ -228,32 +228,32 @@ body {
     padding: 15px;
     max-width: 800px;
     margin: auto;
-}
+}}
 
-h1, h2 {
+h1, h2 {{
     color: #111;
-}
+}}
 
-.timer {
+.timer {{
     background: #f5f5f5;
     padding: 12px;
     border-left: 5px solid #ff3d00;
     margin: 20px 0;
     font-size: 16px;
-}
+}}
 
-.ad {
+.ad {{
     margin: 25px 0;
     text-align: center;
-}
+}}
 
-#continue {
+#continue {{
     display: none;
     margin: 30px 0;
     text-align: center;
-}
+}}
 
-.btn {
+.btn {{
     background: #ff3d00;
     color: #fff;
     border: none;
@@ -261,15 +261,15 @@ h1, h2 {
     font-size: 18px;
     border-radius: 5px;
     cursor: pointer;
-}
+}}
 
-.btn:hover {
+.btn:hover {{
     background: #e03500;
-}
+}}
 </style>
 
 <!-- ================= POPUNDER (PAGE 1 – 1x) ================= -->
-<script type='text/javascript' src='https://plXXXXXXX.effectivegatecpm.com/XXXXXX/invoke.js'></script>
+<script type="text/javascript" src="https://plXXXXXXX.effectivegatecpm.com/XXXXXX/invoke.js"></script>
 
 </head>
 <body>
@@ -289,20 +289,13 @@ confidence, and behavioral timing matter far more.
 </p>
 
 <p>
-Most relationship failures begin because people misunderstand how attraction actually forms. They follow
-surface-level advice, imitate others, or rush emotional connection before desire has time to develop.
+Most relationship failures begin because people misunderstand how attraction actually forms.
 </p>
 
 <h2>Why Desire and Love Are Not the Same</h2>
 
 <p>
-Desire is fast, emotional, and instinct-driven. Love is slow, rational, and built over time. When people
-confuse these two, relationships collapse early or lose intensity.
-</p>
-
-<p>
-Understanding desire allows people to avoid common behaviors that silently destroy attraction — such as
-over-availability, emotional pressure, and validation-seeking.
+Desire is fast, emotional, and instinct-driven. Love is slow, rational, and built over time.
 </p>
 
 <!-- ================= NATIVE BANNER ================= -->
@@ -315,25 +308,19 @@ src="https://plXXXXXXXX.effectivegatecpm.com/XXXXXXXX/invoke.js"></script>
 <h2>Confidence Signals the Brain Instantly</h2>
 
 <p>
-Confidence is not arrogance. It is emotional stability. Calm speech, controlled body language, and
-measured responses send powerful signals to the subconscious mind.
-</p>
-
-<p>
-People who appear relaxed and self-assured are perceived as higher value — regardless of looks, money,
-or status.
+Confidence is emotional stability. Calm speech and controlled body language send powerful signals.
 </p>
 
 <!-- ================= BANNER 300x250 ================= -->
 <div class="ad">
 <script>
-atOptions = {
+atOptions = {{
   'key' : 'XXXXXXXXXXXX',
   'format' : 'iframe',
   'height' : 250,
   'width' : 300,
-  'params' : {}
-};
+  'params' : {{}}
+}};
 </script>
 <script src="https://www.highperformanceformat.com/XXXXXXXXXXXX/invoke.js"></script>
 </div>
@@ -341,24 +328,19 @@ atOptions = {
 <h2>Emotional vs Physical Intimacy</h2>
 
 <p>
-Emotional intimacy creates trust. Physical intimacy reinforces desire. Healthy relationships balance both.
-When one dominates, attraction weakens.
-</p>
-
-<p>
-Understanding this balance allows people to form deeper connections without manipulation or pressure.
+Healthy relationships balance emotional and physical connection.
 </p>
 
 <!-- ================= BANNER 320x50 ================= -->
 <div class="ad">
 <script>
-atOptions = {
+atOptions = {{
   'key' : 'XXXXXXXXXXXX',
   'format' : 'iframe',
   'height' : 50,
   'width' : 320,
-  'params' : {}
-};
+  'params' : {{}}
+}};
 </script>
 <script src="https://www.highperformanceformat.com/XXXXXXXXXXXX/invoke.js"></script>
 </div>
@@ -366,43 +348,42 @@ atOptions = {
 <h2>What Happens Next</h2>
 
 <p>
-The next page reveals deeper psychological patterns behind attachment, desire cycles, and subconscious
-decision-making. This information is intended for adults only.
+The next page reveals deeper psychological patterns. Adults only.
 </p>
 
 <div id="continue">
-    <a href="/step2">
+    <a href="/step2/{slug}">
         <button class="btn">Continue</button>
     </a>
 </div>
 
-<!-- ================= TIMER SCRIPT (VISIBILITY SAFE) ================= -->
+<!-- ================= TIMER SCRIPT ================= -->
 <script>
 let t = 20;
 let timerInterval;
 
-function startTimer() {
-    timerInterval = setInterval(() => {
+function startTimer() {{
+    timerInterval = setInterval(() => {{
         document.getElementById("t").innerText = t;
-        if (t <= 0) {
+        if (t <= 0) {{
             clearInterval(timerInterval);
             document.getElementById("timerText").innerText =
                 "Scroll down and click Continue";
             document.getElementById("continue").style.display = "block";
-        }
+        }}
         t--;
-    }, 1000);
-}
+    }}, 1000);
+}}
 
 startTimer();
 
-document.addEventListener("visibilitychange", function () {
-    if (document.hidden) {
+document.addEventListener("visibilitychange", function () {{
+    if (document.hidden) {{
         clearInterval(timerInterval);
-    } else {
+    }} else {{
         startTimer();
-    }
-});
+    }}
+}});
 </script>
 
 </body>
