@@ -410,8 +410,8 @@ atOptions = {{
 
 <!-- ================= CONTINUE (AFTER TIMER) ================= -->
 <div id="continueBox" style="display:none;">
-<a href="{BASE_URL}/redirect/{slug}">
-<button class="btn">Continue</button>
+<a href="/step2/{slug}">
+    <button class="btn">Continue</button>
 </a>
 </div>
 
