@@ -435,14 +435,13 @@ src="https://pl28575184.effectivegatecpm.com/f42c86f37946ef5ab59eb2d53980afa3/in
 
     return HTMLResponse(content=html)
 
-# ================= STEP 2 PAGE =================
 @app.get("/step2/{slug}", response_class=HTMLResponse)
-async def step2(slug: str, request: Request, db: Session = Depends(get_db)):
+async def step2(slug: str, db: Session = Depends(get_db)):
     link = db.query(Link).filter(Link.slug == slug).first()
     if not link:
         return HTMLResponse("Invalid link", status_code=404)
 
-    html = f"""
+    html = """
 <!DOCTYPE html>
 <html>
 <head>
@@ -450,23 +449,23 @@ async def step2(slug: str, request: Request, db: Session = Depends(get_db)):
 <title>Almost There</title>
 
 <style>
-body {{
+body {
     background:#0f172a;
     color:white;
     font-family:system-ui;
     text-align:center;
     padding:30px;
-}}
+}
 
-.card {{
+.card {
     background:#020617;
     border-radius:18px;
     padding:24px;
     max-width:500px;
     margin:auto;
-}}
+}
 
-.btn {{
+.btn {
     width:100%;
     padding:15px;
     font-size:17px;
@@ -475,41 +474,39 @@ body {{
     color:#000;
     border:none;
     margin-top:20px;
-}}
+}
 </style>
 
 <script>
 let s = 10;
-function timer(){{
+function timer(){
     let i = setInterval(()=>{
         document.getElementById("s").innerText = s;
-        if(s<=0){{
+        if(s<=0){
             clearInterval(i);
             document.getElementById("btn").style.display="block";
-        }}
+        }
         s--;
     },1000);
-}}
+}
 window.onload = timer;
 </script>
 
 </head>
 <body>
 
-<!-- POPUNDER / SOCIAL BAR -->
 <script src="https://pl28574839.effectivegatecpm.com/6f/6f/f2/6f6ff25ccc5d4bbef9cdeafa839743bb.js"></script>
 
 <div class="card">
 <h2>Final Step</h2>
 <p>Please wait <b id="s">10</b> seconds</p>
 
-<!-- NATIVE / BANNER -->
 <script async data-cfasync="false"
 src="https://pl28575184.effectivegatecpm.com/f42c86f37946ef5ab59eb2d53980afa3/invoke.js"></script>
 <div id="container-f42c86f37946ef5ab59eb2d53980afa3"></div>
 
 <div id="btn" style="display:none;">
-    <a href="/redirect/{slug}">
+    <a href="/redirect/SLUG_HERE">
         <button class="btn">Continue</button>
     </a>
 </div>
@@ -517,7 +514,8 @@ src="https://pl28575184.effectivegatecpm.com/f42c86f37946ef5ab59eb2d53980afa3/in
 
 </body>
 </html>
-"""
+""".replace("SLUG_HERE", slug)
+
     return HTMLResponse(content=html)
 
 # ================= FINAL REDIRECT =================
