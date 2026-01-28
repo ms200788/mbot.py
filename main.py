@@ -423,6 +423,60 @@ atOptions = {{
 </html>
 """
 
+
+@app.get("/step2/{slug}", response_class=HTMLResponse)
+async def step2(slug: str, db: Session = Depends(get_db)):
+    link = db.query(Link).filter(Link.slug == slug).first()
+    if not link:
+        return HTMLResponse("Invalid link", status_code=404)
+
+    html = f"""
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Final Step</title>
+        <style>
+            body {{
+                background:#111;
+                color:#fff;
+                font-family:system-ui;
+                padding:20px;
+            }}
+            .btn {{
+                background:#4caf50;
+                color:#fff;
+                padding:15px;
+                width:100%;
+                border-radius:30px;
+                border:none;
+                font-size:18px;
+            }}
+        </style>
+        <script>
+            setTimeout(() => {{
+                document.getElementById("go").style.display = "block";
+            }}, 7000);
+        </script>
+    </head>
+    <body>
+
+        <h2>Almost done</h2>
+        <p>Please wait a few seconds…</p>
+
+        <!-- POPUNDER / SMARTLINK CODE HERE -->
+
+        <div id="go" style="display:none;">
+            <a href="/redirect/{slug}">
+                <button class="btn">Open Link</button>
+            </a>
+        </div>
+
+    </body>
+    </html>
+    """
+    return HTMLResponse(html)
+
 # ================= FINAL REDIRECT =================
 @app.get("/redirect/{slug}")
 async def final_redirect(slug: str, db=Depends(get_db)):
