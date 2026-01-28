@@ -10,7 +10,7 @@ from sqlalchemy.orm import sessionmaker, declarative_base
 # ================= CONFIG =================
 ADMIN_PASSWORD = os.getenv("ADMIN_PASSWORD", "changeme")
 DATABASE_URL = os.getenv("DATABASE_URL")
-BASE_URL = "https://fast-link-2cmx.onrender.com"
+BASE_URL = os.getenv("BASE_URL", "https://example.com")
 
 # ================= DB SETUP =================
 engine = create_engine(
