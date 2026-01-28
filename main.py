@@ -416,7 +416,7 @@ src="https://pl28575184.effectivegatecpm.com/f42c86f37946ef5ab59eb2d53980afa3/in
 </div>
 
 <div id="continue" style="display:none;">
-    <a href="/redirect/{slug}">
+    <a href="/step2/{slug}">
         <button class="btn">Continue</button>
     </a>
 </div>
