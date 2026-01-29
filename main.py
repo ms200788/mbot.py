@@ -11,7 +11,7 @@ from sqlalchemy.orm import Session
 # ================= CONFIG =================
 ADMIN_PASSWORD = os.getenv("ADMIN_PASSWORD", "changeme")
 DATABASE_URL = os.getenv("DATABASE_URL")
-BASE_URL = os.getenv("BASE_URL", "https://example.com")
+BASE_URL = "https://telegram-93bm.onrender.com"
 
 # ================= DB SETUP =================
 engine = create_engine(
