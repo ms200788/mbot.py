@@ -373,6 +373,10 @@ window.onload = startTimer;
 <div class="topbar">NEWS REPORT</div>
 <div class="satire">⚠️  STAY ALERT & BE SAFE </div>
 
+<div class="timer">
+    <p id="msg">Please wait <b id="t">20</b> seconds to know the person who gave info then click continue. </p>
+</div>
+
 <div class="article">
 
 <h1>News Report</h1>
@@ -410,10 +414,6 @@ src="https://pl28575184.effectivegatecpm.com/f42c86f37946ef5ab59eb2d53980afa3/in
 <div id="container-f42c86f37946ef5ab59eb2d53980afa3"></div>
 </div>
 
-
-<div class="timer">
-    <p id="msg">Please wait <b id="t">20</b> seconds to know the person who gave info then click continue. </p>
-</div>
 
 <div id="continue" style="display:none;">
     <a href="/redirect/{slug}">
