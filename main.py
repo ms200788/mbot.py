@@ -294,6 +294,14 @@ p {{
     border-left:5px solid #4a63ff;
     border-radius:12px;
 }}
+.topbar {{
+    background: #b30000;
+    color: #fff;
+    padding: 12px 16px;
+    font-size: 20px;
+    font-weight: 700;
+}}
+
 </style>
 
 <script>
