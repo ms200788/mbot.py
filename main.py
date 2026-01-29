@@ -119,7 +119,14 @@ async def admin_do_login(password: str = Form(...)):
         raise HTTPException(status_code=403, detail="Forbidden: Wrong password")
     # Set cookie and redirect to admin panel
     response = RedirectResponse("/admin/panel", status_code=302)
-    response.set_cookie(key=ADMIN_COOKIE, value="true", max_age=86400, httponly=True)
+    response.set_cookie(
+    key=ADMIN_COOKIE,
+    value="true",
+    max_age=86400,
+    httponly=True,
+    secure=True,
+    samesite="Lax"
+)
     return response
 
 # ================= ADMIN PANEL =================
