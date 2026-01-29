@@ -246,28 +246,28 @@ async def ad_page(slug: str, request: Request, db=Depends(get_db)):
 <title>Artificial Intelligence – A Complete Guide</title>
 
 <style>
-body {
+body {{
     background:#0f2027;
     color:#eaeaea;
     font-family:system-ui;
     margin:0;
-}
-.card {
+}}
+.card {{
     background:#ffffff;
     color:#000000;
     border-radius:16px;
     padding:20px;
     margin:16px;
-}
-h1,h2,h3 {
-    color:#1c1c1c; /* dark headings */
-}
-p {
+}}
+h1,h2,h3 {{
+    color:#1c1c1c;
+}}
+p {{
     line-height:1.8;
     margin:14px 0;
     font-size:15px;
-}
-.btn {
+}}
+.btn {{
     background:#ff4b2b;
     color:#fff;
     border:none;
@@ -275,46 +275,42 @@ p {
     width:100%;
     border-radius:30px;
     font-size:16px;
-}
-.timer {
+}}
+.timer {{
     text-align:center;
     font-size:16px;
     margin:20px 0;
-}
-.ad {
+}}
+.ad {{
     margin:24px 0;
     text-align:center;
-}
-.section{
+}}
+.section {{
     margin-bottom:32px;
-}
-
-.conclusion{
+}}
+.conclusion {{
     background:#f0f3ff;
     padding:20px;
     border-left:5px solid #4a63ff;
     border-radius:12px;
-}
+}}
 </style>
 
 <script>
 let t = 20;
 let timer = setInterval(() => {
     document.getElementById("t").innerText = t;
-    if (t <= 0) {{
+    if (t <= 0) {
         clearInterval(timer);
         document.getElementById("continueBox").style.display = "block";
         document.getElementById("timerText").innerText = "You can continue now";
-    }}
+    }
     t--;
 }, 1000);
 </script>
 </head>
 
 <body>
-
-<!-- ================= SOCIAL BAR (VIDEO / JS) ================= -->
-
 
 <div class="card">
 
@@ -486,14 +482,11 @@ to improve lives, advance knowledge, and create a smarter and more efficient wor
 
 </div>
 
-
 <!-- ================= CONTINUE (AFTER TIMER) ================= -->
-<div id="continueBox" style="display:none;">
+<div id="continueBox" style="display:none; margin:16px;">
 <a href="{BASE_URL}/redirect/{slug}">
 <button class="btn">Continue</button>
 </a>
-</div>
-
 </div>
 
 </body>
