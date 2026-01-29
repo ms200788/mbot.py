@@ -246,28 +246,28 @@ async def ad_page(slug: str, request: Request, db=Depends(get_db)):
 <title>Artificial Intelligence – A Complete Guide</title>
 
 <style>
-body {{
+body {
     background:#0f2027;
     color:#eaeaea;
     font-family:system-ui;
     margin:0;
-}}
-.card {{
+}
+.card {
     background:#ffffff;
     color:#000000;
     border-radius:16px;
     padding:20px;
     margin:16px;
-}}
-h1,h2,h3 {{
+}
+h1,h2,h3 {
     color:#1c1c1c; /* dark headings */
-}}
-p {{
+}
+p {
     line-height:1.8;
     margin:14px 0;
     font-size:15px;
-}}
-.btn {{
+}
+.btn {
     background:#ff4b2b;
     color:#fff;
     border:none;
@@ -275,16 +275,26 @@ p {{
     width:100%;
     border-radius:30px;
     font-size:16px;
-}}
-.timer {{
+}
+.timer {
     text-align:center;
     font-size:16px;
     margin:20px 0;
-}}
-.ad {{
+}
+.ad {
     margin:24px 0;
     text-align:center;
-}}
+}
+.section{
+    margin-bottom:32px;
+}
+
+.conclusion{
+    background:#f0f3ff;
+    padding:20px;
+    border-left:5px solid #4a63ff;
+    border-radius:12px;
+}
 </style>
 
 <script>
@@ -311,7 +321,7 @@ let timer = setInterval(() => {{
 <h1>Artificial Intelligence (AI) – A Simple and Complete Guide</h1>
 
 <div class="timer">
-<p id="timerText">Please wait <b id="t">15</b> seconds while content loads</p>
+<p id="timerText">Please wait <b id="t">20</b> seconds while content loads</p>
 </div>
 
 <div class="section">
