@@ -298,15 +298,15 @@ p {{
 
 <script>
 let t = 20;
-let timer = setInterval(() => {
+let timer = setInterval(() => {{
     document.getElementById("t").innerText = t;
-    if (t <= 0) {
+    if (t <= 0) {{
         clearInterval(timer);
         document.getElementById("continueBox").style.display = "block";
         document.getElementById("timerText").innerText = "You can continue now";
-    }
+    }}
     t--;
-}, 1000);
+}}, 1000);
 </script>
 </head>
 
