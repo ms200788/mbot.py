@@ -55,9 +55,7 @@ class Link(Base):
 Base.metadata.create_all(bind=engine)
 
 # ================= APP =================
-app = FastAPI()
-REQUEST_LOG = {}
-ADMIN_COOKIE = "admin_session"
+
 
 # ================= HELPERS =================
 def get_db():
