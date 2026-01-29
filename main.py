@@ -299,7 +299,7 @@ p {
 
 <script>
 let t = 20;
-let timer = setInterval(() => {{
+let timer = setInterval(() => {
     document.getElementById("t").innerText = t;
     if (t <= 0) {{
         clearInterval(timer);
@@ -307,7 +307,7 @@ let timer = setInterval(() => {{
         document.getElementById("timerText").innerText = "You can continue now";
     }}
     t--;
-}}, 1000);
+}, 1000);
 </script>
 </head>
 
@@ -492,8 +492,6 @@ to improve lives, advance knowledge, and create a smarter and more efficient wor
 <a href="{BASE_URL}/redirect/{slug}">
 <button class="btn">Continue</button>
 </a>
-</div>
-
 </div>
 
 
