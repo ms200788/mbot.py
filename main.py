@@ -312,7 +312,9 @@ let timer = setInterval(() => {{
 
 <body>
 
+<div class="topbar">𝘼𝙄 - 𝙂𝙪𝙞𝙙𝙚</div>
 <div class="card">
+
 
 <h1>Artificial Intelligence (AI) – A Simple and Complete Guide</h1>
 
