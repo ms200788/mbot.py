@@ -295,7 +295,7 @@ p {{
     border-radius:12px;
 }}
 .topbar {{
-    background: #b30000;
+    background: #121212;
     color: #fff;
     padding: 12px 16px;
     font-size: 20px;
